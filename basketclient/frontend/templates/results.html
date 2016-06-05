@@ -1,3 +1,13 @@
 <div class="modal">
-    <h1>results</h1>
+    <md-icon class="close-icon" md-svg-src="frontend/close.svg" ng-click="close()"></md-icon>
+
+<md-list ng-cloak class="results-list">
+    <md-subheader class="md-no-sticky">Services Near You</md-subheader>
+    <md-list-item ng-repeat="amenity in amenities">
+        <p>{{amenity.name}}</p>
+        <p>{{amenity.address}}</p>
+        <p style="color: rgba(0,0,0,0.54);">{{amenity.amenity_type}}</p>
+    </md-list-item>
+</md-list>
+
 </div>
