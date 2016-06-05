@@ -1,0 +1,85 @@
+@font-face {
+    font-family: Fat;
+    src: url('fonts/dk_moonlight_serenade.otf');
+}
+
+/*
+ * Form
+ */
+.location-form {
+}
+
+.form-group {
+    margin-top: 20px;
+}
+
+.location-form label {
+    color: #fff;
+    font-size: 21px;
+}
+
+.md-input-focused label {
+    color: #fff !important;
+}
+
+*:focus {
+    outline: 0 !important;
+}
+
+/*
+ * Flag
+ */
+.flag {
+    min-height: 300px;
+    text-align: center;
+    font-size: 35px;
+}
+
+.flag-left {
+    font-family: Fat;
+}
+.flag-right {
+    background-color: #E0162B;
+    color: #fff;
+    font-family: Fat;
+}
+
+.flag-bottom {
+    background-color: #0052A5;
+    height: 100%;
+}
+
+.location-form {
+    position: relative;
+    margin-top: 5%;
+    width: 100%;
+}
+
+.star-icon {
+    width: 180px;
+    height: 180px;
+    cursor: pointer;
+}
+
+.star-icon-text {
+    position: absolute;
+    top: 45%;
+    left: 0;
+    text-align: center;
+    font-size: 22px;
+    width: 100%;
+}
+
+/*
+ * Modal
+ */
+
+.modal {
+    position: absolute;
+    z-index: 100;
+    background-color: #fff;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
