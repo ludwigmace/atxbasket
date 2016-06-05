@@ -28,13 +28,14 @@
 
 input {
     color: #fff !important;
+    font-size: 30px;
 }
 
 /*
  * Flag
  */
 .flag {
-    min-height: 300px;
+    min-height: 335px;
     text-align: center;
     font-size: 35px;
 }
@@ -48,6 +49,10 @@ input {
     font-family: Fat;
 }
 
+.flag-right p {
+    font-size: 50px;
+}
+
 .flag-bottom {
     background-color: #0052A5;
     height: 100%;
@@ -55,8 +60,10 @@ input {
 
 .location-form {
     position: relative;
-    margin-top: 5%;
-    width: 100%;
+    width: 77%;
+    margin: 0 auto;
+    padding-top: 5%;
+    font-family: Fat;
 }
 
 .star-icon {
@@ -67,11 +74,34 @@ input {
 
 .star-icon-text {
     position: absolute;
+    /* font-family: Roboto,"Helvetica Neue",sans-serif; */
     top: 45%;
     left: 0;
     text-align: center;
     font-size: 22px;
     width: 100%;
+}
+
+.star-container {
+    position: relative;
+}
+
+
+.star-loading {
+    transition: all 1s ease;
+    -webkit-animation: rot 4s infinite;
+        animation: rot 4s infinite;
+}
+
+@keyframes rot {
+    to { transform: rotate(360deg) translateZ(0); }
+}
+
+/*
+ * Results List
+ */
+
+.results-list {
 }
 
 /*
@@ -86,4 +116,25 @@ input {
     width: 100%;
     top: 0;
     left: 0;
+
+    -webkit-animation: animateModal 0.5s;
+        animation: animateModal 0.5s;
+}
+
+.modal .close-icon {
+    margin: 20px;
+}
+
+@keyframes animateModal {
+
+    from {
+        opacity: 0;
+        top: 100%;
+    }
+
+    to {
+        opacity: 1;
+        top: 0;
+    }
+
 }

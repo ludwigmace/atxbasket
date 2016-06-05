@@ -1,4 +1,4 @@
-var app = angular.module('app', ['ngMaterial', 'ui.router']);
+var app = angular.module('app', ['ngMaterial', 'ui.router', 'ngAnimate']);
 
 app.config(function($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise('/');
@@ -9,7 +9,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
             templateUrl: 'frontend/templates/home.html',
             controller: 'HomeCtrl'
         })
-        .state('root.result', {
+        .state('root.results', {
             url: 'results',
             views: {
                 'modal@root': {
@@ -20,17 +20,35 @@ app.config(function($stateProvider, $urlRouterProvider) {
         })
 })
 
-app.controller('HomeCtrl', function ($scope, $http, LocationService) {
+app.controller('HomeCtrl', function ($scope, $http, $state, LocationService) {
     $scope.user = {};
+    $scope.amenities = [];
 
-    $scope.submit = function(user) {
+    $scope.$watch('amenities');
+
+    $scope.submit = function(user, $event) {
+        var loadingClass = 'star-loading';
+        var starEl = angular.element($event.currentTarget).find('md-icon')[0];
+
+        starEl.classList.add(loadingClass);
+
         LocationService.get().then(function(res) {
-            $http.post()
+
+            $http.get('fakedata/test.json').then(function(response) {
+                $scope.amenities = response.data;
+                starEl.classList.remove(loadingClass);
+                $state.transitionTo('root.results');
+            })
         })
     };
 });
 
-app.controller('ResultsCtrl', function($scope) {
+app.controller('ResultsCtrl', function($scope, $state) {
+    $scope.amenities = $scope.$parent.amenities;
+
+    $scope.close = function() {
+        $state.transitionTo('root');
+    };
 
 });
 
