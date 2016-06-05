@@ -52,16 +52,22 @@ app.controller('ResultsCtrl', function($scope, $state) {
 
 });
 
-app.service('LocationService', function($http, $q) {
+app.service('LocationService', function($http, $q, $timeout) {
     function nativeGeoCoder() {
         var defer = $q.defer();
 
+        $timeout(function() {
+            console.log('timeout');
+            defer.resolve({});
+        }, 1000);
+        /*
         navigator.geolocation.getCurrentPosition(function(res){
             defer.resolve({
                 lat: res.coords.latitude,
                 lon: res.coords.longitude
             });
         });
+        */
         return defer.promise;
     }
 
