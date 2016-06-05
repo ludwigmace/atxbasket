@@ -26,6 +26,10 @@
     outline: 0 !important;
 }
 
+input {
+    color: #fff !important;
+}
+
 /*
  * Flag
  */
