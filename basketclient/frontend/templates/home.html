@@ -1,0 +1,30 @@
+
+<div layout="row" class="flag">
+    <div layout="row" flex="50%">
+        <div flex="50%" class="flag-left">
+            <h1>Austin Welcome Basket</h1>
+        </div>
+        <div flex="50%" class="flag-right">
+            <p>
+                A local guide to city services.
+            </p>
+        </div>
+    </div>
+</div>
+
+<div layout="row" class="flag-bottom">
+    <div class="location-form" layout="column">
+        <md-input-container layout="column" layout-fill>
+          <label>Enter Address <small>(optional)</small></label>
+          <input layout-align-gt-md ng-model="user.address">
+        </md-input-container>
+        <div class="form-group" layout="column" layout-align="center center">
+            <div ng-click="submit">
+                <md-icon class="star-icon" md-svg-src="frontend/star.svg"></md-icon>
+                <span class="star-icon-text">Locate</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div ui-view="modal"></div>

@@ -1,0 +1,4 @@
+.DS_Store
+*.pyc
+basketclient/sql/data/
+basketclient/sql/db_config.py
