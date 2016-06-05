@@ -1,0 +1,38 @@
+[
+    {
+        "amenity_type": "library",
+        "name": "Carver Branch",
+        "address": "1161 Angelina St, Austin TX 78702"
+    },
+    {
+        "amenity_type": "library",
+        "name": "North Village Branch",
+        "address": "2505 Steck Ave, Austin TX 78757"
+    },
+    {
+        "amenity_type": "library",
+        "name": "North Village Branch",
+        "address": "2505 Steck Ave, Austin TX 78757"
+    },
+    {
+        "amenity_type": "library",
+        "name": "Ruiz Branch",
+        "address": "1600 Grove Blvd, Austin TX 78741"
+    },
+    {
+        "amenity_type": "restaurants",
+        "name": "100 Pizzitas",
+        "address": "900 E 7TH ST, Austin TX 78702"
+    },
+    {
+        "amenity_type": "restaurants",
+        "name": "austin daily press",
+        "address": "1900 E Martin Luther King Jr Blvd, Austin TX 78702"
+    },
+    {
+        "amenity_type": "restaurants",
+        "name": "champ's food mart",
+        "address": "2433 S Pleasant Valley Rd, Austin TX 78741"
+    }
+
+]

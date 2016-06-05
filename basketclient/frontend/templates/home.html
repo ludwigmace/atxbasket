@@ -1,12 +1,11 @@
-
 <div layout="row" class="flag">
     <div layout="row" flex="50%">
-        <div flex="50%" class="flag-left">
+        <div flex="50%" class="flag-left" layout="row" layout-align="center center">
             <h1>Austin Welcome Basket</h1>
         </div>
-        <div flex="50%" class="flag-right">
+        <div flex="50%" class="flag-right" layout="row" layout-align="center center">
             <p>
-                A local guide to city services.
+                A local guide to city services
             </p>
         </div>
     </div>
@@ -19,12 +18,15 @@
           <input layout-align-gt-md ng-model="user.address">
         </md-input-container>
         <div class="form-group" layout="column" layout-align="center center">
-            <div ng-click="submit">
+            <div ng-click="submit(user, $event)" class="star-container" layout="row" layout-align="center center">
                 <md-icon class="star-icon" md-svg-src="frontend/star.svg"></md-icon>
-                <span class="star-icon-text">Locate</span>
+                <span class="star-icon-text">
+                    Click Me
+                </span>
             </div>
+
         </div>
     </div>
 </div>
 
-<div ui-view="modal"></div>
+<div ui-view="modal" ng-class="modal-view"></div>
