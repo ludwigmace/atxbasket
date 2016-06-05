@@ -4,7 +4,7 @@ import rds_config
 import pymysql
 
 #rds settings
-rds_host  = "basket2.c3ketvqnw11i.us-east-1.rds.amazonaws.com"
+rds_host  = rds_config.db_host
 name = rds_config.db_username
 password = rds_config.db_password
 db_name = rds_config.db_name
